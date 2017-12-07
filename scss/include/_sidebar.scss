@@ -1,0 +1,145 @@
+.fluid-sidebar{
+    flex-basis: 100%;
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-width: 100%;
+    @include media-breakpoint-up(md){
+        flex-basis: 250px;
+        max-width: 250px;
+    }
+    .ec-home-left-accordion{
+        background-color: $color-ivory;
+        border-radius: 2px;
+        .card{
+            border: none;
+            border-radius: 0;
+            padding-left: 10px;
+            padding-right: 10px;
+            .card-header{
+                background-color: transparent;
+                border-color: $color-gainsboro;
+                padding: 0;
+                a{
+                    color: $color-allports;
+                    font-size: 15px;
+                    @include font-Raleway-Light;
+                    height: 34px;
+                    i{
+                        color: $color-night-rider;
+                    }
+                    &[aria-expanded="false"]{
+                        .fa-plus{
+                            display: inline-block;
+                        }
+                        .fa-minus{
+                            display: none;
+                        }
+                    }
+                    &[aria-expanded="true"]{
+                        .fa-plus{
+                            display: none;
+                        }
+                        .fa-minus{
+                            display: inline-block;
+                        }
+                    }
+                    &:hover,
+                    &:focus{
+                        text-decoration: none;
+                    }
+                }
+            }
+            .card-block{
+                .card-block-item{
+                    border-bottom: 1px solid $color-gainsboro;
+                    color: $color-night-rider;
+                    font-size: 15px;
+                    @include font-Raleway-Light;
+                    height: 35px;
+                    transition: color 0.3s ease-in-out 0s;
+                    &:hover,
+                    &:focus{
+                        color: $color-pelorous;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+    .ec-sidebar-current-events{
+        background-color: $color-ivory;
+        border: 3px solid $color-celery;
+        border-radius: 2px;
+        .ec-sidebar-current-events-header{
+            background-color: $color-celery;
+            color: $color-white;
+            font-size: 22px;
+            @include font-Raleway-Bold;
+            height: 50px;
+        }
+        .current-event-list{
+            & + .current-event-list{
+                border-top: 1px solid $color-gainsboro;
+            }
+            .date{
+                flex-basis: 40px;
+                flex-grow: 0;
+                flex-shrink: 0;
+                max-width: 40px;
+                span{
+                    background-color: $color-celery;
+                    color: $color-ivory;
+                    @include font-Opensans-Regular;
+                    line-height: 120%;
+                    text-align: center;
+                    &:first-child{
+                        font-size: 22px;
+                    }
+                    &:last-child{
+                        font-size: 13px;
+                    }
+                }
+            }
+            .time{
+                a{
+                    color: $color-black-magic;
+                    font-size: 16px;
+                    line-height: 20px;
+                    transition: color 0.3s ease-in-out 0s;
+                    & + a{
+                        margin-top: 20px;
+                    }
+                    span{
+                        &:first-child{
+                            @include font-Raleway-Regular;
+                        }
+                        &:last-child{
+                            @include font-Opensans-Regular;
+                        }
+                    }
+                    &:hover,
+                    &:focus{
+                        color: $color-pelorous;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+        .ce-sidebar-current-events-footer{
+            a{
+                background-color: $color-cerulean;
+                border-radius: 2px;
+                color: $color-white;
+                font-size: 15px;
+                @include font-Raleway-Bold;
+                height: 35px;
+                transition: background-color 0.3s ease-in-out 0s;
+                &:hover,
+                &:focus{
+                    background-color: $color-allports;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,153 @@
+.ec-home-carousel{
+    .carousel{
+        width: 100%;
+    }
+    .carousel-inner{
+        .carousel-item{
+            background-attachment: scroll;
+            background-color: transparent;
+            background-image: none;
+            background-position: left top;
+            background-repeat: no-repeat;
+            background-size: cover;
+            flex-direction: column;
+            justify-content: flex-end;
+            height: 560px;
+            @include media-breakpoint-up(lg){
+                height: 700px;
+            }
+            @include media-breakpoint-up(xl){
+                height: 800px;
+            }
+            .carousel-caption{
+                background-color: $color-celery;
+                bottom: auto;
+                color: $color-white;
+                font-size: 22px;
+                @include font-Raleway-Semibold;
+                left: auto;
+                line-height: 120%;
+                position: relative;
+                right: auto;
+                width: 100%;
+            }
+        }
+    }
+}
+.ce-content-home{
+    .home-welcome{
+        h1{
+            color: $color-black;
+            font-size: 36px;
+            @include font-Raleway-Light;
+            line-height: 120%;
+        }
+        p{
+            color: $color-black-magic;
+            font-size: 18px;
+            @include font-Raleway-Regular;
+            line-height: 25px;
+        }
+    }
+    .home-feature-program{
+        h1{
+            color: $color-black;
+            font-size: 36px;
+            @include font-Raleway-Light;
+            line-height: 120%;
+            a{
+                color: $color-allports;
+                display: inline-block;
+                font-size: 15px;
+                transition: color 0.3s ease-in-out 0s;
+                white-space: nowrap;
+                &:hover,
+                &:focus{
+                    color: $color-pelorous;
+                    text-decoration: none;
+                }
+            }
+        }
+        .program-link{
+            color: $color-allports;
+            font-size: 17px;
+            @include font-Raleway-Light;
+            line-height: 23px;
+            transition: color 0.3s ease-in-out 0s;
+            &:hover,
+            &:focus{
+                color: $color-pelorous;
+                text-decoration: none;
+            }
+        }
+        span{
+            color: $color-dark-gray;
+            font-size: 17px;
+            @include font-Opensans-Light;
+            line-height: 23px;
+        }
+    }
+    .home-latest-news{
+        h1{
+            color: $color-black;
+            font-size: 36px;
+            @include font-Raleway-Light;
+            line-height: 120%;
+        }
+        .lastest-news-item{
+            & + .lastest-news-item{
+                margin-top: 15px;
+            }
+            .image{
+                flex-basis: 65px;
+                flex-grow: 0;
+                flex-shrink: 0;
+                max-width: 65px;
+            }
+            .text{
+                a{
+                    color: $color-black-magic;
+                    font-size: 18px;
+                    @include font-Raleway-Regular;
+                    line-height: 25px;
+                    transition: color 0.3s ease-in-out 0s;
+                    &:hover,
+                    &:focus{
+                        color: $color-pelorous;
+                        text-decoration: none;
+                    }
+                    &.read-more{
+                        color: $color-allports;
+                        font-size: 15px;
+                        @include font-Raleway-Light;
+                        line-height: 120%;
+                        &:hover
+                        &:focus{
+                            color: $color-cerulean;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.ec-gift-certificate{
+    background-color: $color-celery;
+    .col-12{
+        color: $color-white;
+        font-size: 18px;
+        @include font-Opensans-Light;
+        line-height: 25px;
+        span{
+            font-size: 20px;
+            @include font-Opensans-Bold;
+        }
+        & + .col-12{
+            border-top: 2px solid rgba(0, 0, 0, 0.20);
+            @include media-breakpoint-up(md){
+                border-top: 0;
+                border-left: 2px solid rgba(0, 0, 0, 0.20);
+            }
+        }
+    }
+}

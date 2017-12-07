@@ -1,0 +1,41 @@
+.ec-contactus{
+    .form-group{
+        label{
+            color: $color-black-magic;
+            font-size: 15px;
+            @include font-Opensans-Semibold;
+            span{
+                color: $color-dark-red;
+            }
+        }
+        .form-control{
+            border-radius: 0;
+            color: $color-black-magic;
+            font-size: 14px;
+            @include font-Opensans-Regular;
+            height: 40px;
+        }
+        textarea{
+            &.form-control{
+                height: auto;
+            }
+        }
+        button{
+            background-color: $color-allports;
+            border: none;
+            border-radius: 2px;
+            color: $color-white;
+            font-size: 15px;
+            @include font-Opensans-Bold;
+            height: 40px;
+            padding-left: 30px;
+            padding-right: 30px;
+            text-transform: uppercase;
+            transition: background-color 0.3s ease-in-out 0s;
+            &:hover,
+            &:focus{
+                background-color: $color-pelorous;
+            }
+        }
+    }
+}

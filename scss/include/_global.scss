@@ -1,0 +1,244 @@
+* {
+    margin: 0;
+    padding: 0
+}
+*:focus{
+    outline: none !important;
+}
+*{
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+}
+body{
+    font-size: 13px;
+    @include font-Opensans-Regular;
+    line-height: 120%;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+}
+/* Generate margin and padding */
+$spaceamounts: (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100); // Adjust this to include the pixel amounts you need.
+$sides: (top, bottom, left, right); // Leave this variable alone
+@each $space in $spaceamounts {
+    @each $side in $sides {
+        .m-#{$space} {
+            margin-#{$side}: #{$space}px !important;
+        }
+
+        .p-#{$space} {
+            padding-#{$side}: #{$space}px !important;
+        }
+    }
+}
+
+@each $space in $spaceamounts {
+    @each $side in $sides {
+        .m#{str-slice($side, 0, 1)}-#{$space} {
+            margin-#{$side}: #{$space}px !important;
+        }
+
+        .p#{str-slice($side, 0, 1)}-#{$space} {
+            padding-#{$side}: #{$space}px !important;
+        }
+    }
+}
+
+@include media-breakpoint-up(sm) {
+    @each $space in $spaceamounts {
+        @each $side in $sides {
+            .m#{str-slice($side, 0, 1)}-sm-#{$space} {
+                margin-#{$side}: #{$space}px !important;
+            }
+
+            .p#{str-slice($side, 0, 1)}-sm-#{$space} {
+                padding-#{$side}: #{$space}px !important;
+            }
+
+            .m-sm-#{$space} {
+                margin-#{$side}: #{$space}px !important;
+            }
+
+            .p-sm-#{$space} {
+                padding-#{$side}: #{$space}px !important;
+            }
+        }
+    }
+}
+
+@include media-breakpoint-up(md) {
+    @each $space in $spaceamounts {
+        @each $side in $sides {
+            .m#{str-slice($side, 0, 1)}-md-#{$space} {
+                margin-#{$side}: #{$space}px !important;
+            }
+
+            .p#{str-slice($side, 0, 1)}-md-#{$space} {
+                padding-#{$side}: #{$space}px !important;
+            }
+
+            .m-md-#{$space} {
+                margin-#{$side}: #{$space}px !important;
+            }
+
+            .p-md-#{$space} {
+                padding-#{$side}: #{$space}px !important;
+            }
+        }
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    @each $space in $spaceamounts {
+        @each $side in $sides {
+            .m#{str-slice($side, 0, 1)}-lg-#{$space} {
+                margin-#{$side}: #{$space}px !important;
+            }
+
+            .p#{str-slice($side, 0, 1)}-lg-#{$space} {
+                padding-#{$side}: #{$space}px !important;
+            }
+
+            .m-lg-#{$space} {
+                margin-#{$side}: #{$space}px !important;
+            }
+
+            .p-lg-#{$space} {
+                padding-#{$side}: #{$space}px !important;
+            }
+        }
+    }
+}
+
+@include media-breakpoint-up(xl) {
+    @each $space in $spaceamounts {
+        @each $side in $sides {
+            .m#{str-slice($side, 0, 1)}-xl-#{$space} {
+                margin-#{$side}: #{$space}px !important;
+            }
+
+            .p#{str-slice($side, 0, 1)}-xl-#{$space} {
+                padding-#{$side}: #{$space}px !important;
+            }
+
+            .m-xl-#{$space} {
+                margin-#{$side}: #{$space}px !important;
+            }
+
+            .p-xl-#{$space} {
+                padding-#{$side}: #{$space}px !important;
+            }
+        }
+    }
+}
+/* Generate margin and padding end */
+/* POSITION CSS */
+.position-relative{
+    position: relative !important;
+}
+.position-absolute{
+    position: absolute !important;
+}
+.position-fixed{
+    position: fixed !important;
+}
+.position-static{
+    position: static !important;
+}
+.position-sticky{
+    position: sticky !important;
+}
+.position-inherit{
+    position: inherit !important;
+}
+.position-initial{
+    position: initial !important;
+}
+.position-unset{
+    position: unset !important;
+}
+/* POSITION CSS END */
+/* CONTAINER WIDTH RE ASSIGN */
+.container{
+    width: 100%;
+    @include media-breakpoint-up(sm){
+        width: 540px;
+    }
+    @include media-breakpoint-up(md){
+        width: 720px;
+    }
+    @include media-breakpoint-up(lg){
+        width: 960px;
+    }
+    @include media-breakpoint-up(xl){
+        width: 1140px;
+    }
+}
+/* CONTAINER WIDTH RE ASSIGN END */
+
+.fluid-content{
+    width: 100%;
+    h2{
+        color: $color-black-magic;
+        font-size: 30px;
+        @include font-Raleway-Semibold;
+        line-height: 120%;
+    }
+    h3{
+        color: $color-baltic-sea;
+        font-size: 24px;
+        @include font-Raleway-Semibold;
+        line-height: 120%;
+        a{
+            color: $color-baltic-sea;
+            transition: color 0.3s ease-in-out 0s;
+            &:hover,
+            &:focus{
+                color: $color-allports;
+                text-decoration: none;
+            }
+        }
+    }
+    p,
+    address{
+        color: $color-black-magic;
+        font-size: 15px;
+        @include font-Raleway-Light;
+        line-height: 1.5;
+        a{
+            color: $color-allports;
+            transition: color 0.3s ease-in-out 0s;
+            &:hover,
+            &:focus{
+                color: $color-pelorous;
+                text-decoration: none;
+            }
+        }
+    }
+    ul{
+        list-style-position: outside;
+        padding-left: 20px;
+        li{
+            color: $color-black-magic;
+            font-size: 15px;
+            @include font-Raleway-Light;
+            line-height: 1.5;
+        }
+    }
+    .video{
+        height: 355px;
+        width: 100%;
+        video{
+            height: 100%;
+            left: 0;
+            margin:  0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+    }
+}
+.card-view{
+    background-color: $color-white;
+    border: 1px solid $color-white-smoke;
+    border-radius: 2px;
+}

@@ -1,0 +1,77 @@
+footer{
+    background-color: $color-cerulean;
+    padding-top: 30px;
+    .quick-link{
+        .list-inline-item{
+            margin-bottom: 20px;
+            &:not(:last-child){
+                border-right: 1px solid $color-pelorous;
+                margin-right: 20px;
+                padding-right: 20px;
+            }
+            .list-inline-link{
+                color: $color-gainsboro;
+                font-size: 18px;
+                @include font-Raleway-Regular;
+                line-height: 25px;
+                transition: color 0.3s ease-in-out 0s;
+                &:hover,
+                &:focus{
+                    color: $color-white;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    .footer-address{
+        .list-inline-item{
+            color: $color-gainsboro;
+            font-size: 15px;
+            @include font-Opensans-Light;
+            line-height: 120%;
+            position: relative;
+            span{
+                @include font-Opensans-Bold;
+            }
+            &:not(:last-child){
+                margin-right: 5px;
+                padding-right: 5px;
+                &:after{
+                    background-color: $color-gainsboro;
+                    border-radius: 50%;
+                    content: '';
+                    height: 2px;
+                    position: absolute;
+                    right: -1px;
+                    top: calc(50% - 1px);
+                    width: 2px;
+                }
+            }
+        }
+    }
+    .footer-social-link{
+        .list-inline-item{
+            &:not(:last-child){
+                margin-right: 5px;
+            }
+            .list-inline-link{
+                background-color: $color-white;
+                border-radius: 50%;
+                color: $color-cerulean;
+                font-size: 18px;
+                height: 27px;
+                width: 27px;
+                &:hover,
+                &:focus{
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    p{
+        color: $color-gainsboro;
+        font-size: 12px;
+        @include font-Opensans-Light;
+        line-height: 120%;
+    }
+}

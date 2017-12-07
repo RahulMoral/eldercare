@@ -1,0 +1,54 @@
+.ec-about-banner{
+    background-attachment: scroll;
+    background-color: transparent;
+    background-image: url(../images/about-banner-bg.jpg);
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    .col-12{
+        height: 315px;
+        @media (min-width: 2530px){
+            height: 426px;
+        }
+        h1{
+            color: $color-white;
+            font-size: 45px;
+            @include font-Raleway-Semibold;
+        }
+    }
+}
+.ec-about-content{
+    h1{
+        color: $color-black;
+        font-size: 36px;
+        @include font-Raleway-Light;
+        line-height: 120%;
+    }
+    h3{
+        color: $color-black-magic;
+        font-size: 25px;
+        @include font-Raleway-Regular;
+        line-height: 36px;
+        span{
+            @include font-Raleway-Bold;
+        }
+    }
+    p{
+        color: $color-black-magic;
+        font-size: 18px;
+        @include font-Raleway-Regular;
+        line-height: 25px;
+        span{
+            @include font-Raleway-Bold;
+        }
+        a{
+            color: $color-cerulean;
+            transition: color 0.3s ease-in-out 0s;
+            &:hover,
+            &:focus{
+                color: $color-pelorous;
+                text-decoration: none;
+            }
+        }
+    }
+}

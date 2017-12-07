@@ -1,0 +1,36 @@
+@mixin font-Opensans-Light{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+}
+@mixin font-Opensans-Regular{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+@mixin font-Opensans-Semibold{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+}
+@mixin font-Opensans-Bold{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+}
+@mixin font-Raleway-Light{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+}
+@mixin font-Raleway-Regular{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+}
+@mixin font-Raleway-Medium{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+}
+@mixin font-Raleway-Semibold{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+}
+@mixin font-Raleway-Bold{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+}

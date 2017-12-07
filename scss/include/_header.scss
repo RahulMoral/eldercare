@@ -1,0 +1,234 @@
+.header-top{
+    background-color: $color-white-smoke;
+    @include media-breakpoint-down(sm){
+        display: none;
+    }
+    .ec-phone-number{
+        color: $color-baltic-sea;
+        font-size: 15px;
+        @include font-Opensans-Regular;
+        line-height: 120%;
+        span{
+            &:last-child{
+                @include font-Opensans-Bold;
+            }
+        }
+    }
+    .ec-header-social{
+        a{
+            background-color: $color-celery;
+            border-radius: 50%;
+            color: $color-white;
+            font-size: 15px;
+            height: 27px;
+            width: 27px;
+            &:not(:last-child){
+                margin-right: 5px;
+            }
+            &:hover,
+            &:focus{
+                text-decoration: none;
+            }
+        }
+    }
+    .ce-header-font-adjust{
+        a{
+            color: $color-baltic-sea;
+            line-height: 120%;
+            &:not(:last-child){
+                margin-right: 5px;
+            }
+            &.font-small{
+                font-size: 13px;
+                @include font-Opensans-Regular;
+            }
+            &.font-medium{
+                font-size: 15px;
+                @include font-Opensans-Semibold;
+            }
+            &.font-large{
+                font-size: 18px;
+                @include font-Opensans-Bold;
+            }
+        }
+    }
+    .ce-header-search{
+        .form-control{
+            border-color: $color-gainsboro;
+            border-radius: 0;
+            color: $color-gray-7f;
+            font-size: 12px;
+            @include font-Opensans-Light;
+            height: 24px;
+            padding: 0 20px 0 15px;
+        }
+        i{
+            color: $color-baltic-sea;
+            font-size: 13px;
+            position: absolute;
+            right: 8px;
+            top: calc(50% - 6.5px);
+        }
+    }
+}
+.main-menu{
+    border-bottom: 1px solid $color-white-smoke;
+    .container{
+        @include media-breakpoint-down(md){
+            width: 100%;
+        }
+    }
+    .navbar{
+        padding: 5px 15px;
+        width: 100%;
+        .navbar-toggler{
+            border-color: $color-baltic-sea;
+            color: $color-baltic-sea;
+            cursor: pointer;
+            top: 29.29165px;
+        }
+        .navbar-brand{
+            height: auto;
+            padding: 0;
+            width: 200px;
+            @include media-breakpoint-up(lg){
+                width: auto;
+            }
+        }
+        .navbar-collapse{
+            .navbar-nav{
+                margin-left: -15px;
+                margin-right: -15px;
+                @include media-breakpoint-up(lg){
+                    margin-left: 0;
+                    margin-right: 0;
+                }
+                .nav-item{
+                    border-top: 1px solid $color-baltic-sea;
+                    @include media-breakpoint-up(lg){
+                        border-top: 0;
+                    }
+                    &:not(:last-child){
+                        @include media-breakpoint-up(lg){
+                            margin-right: 20px;
+                        }
+                    }
+                    .nav-link{
+                        color: $color-night-rider;
+                        font-size: 15px;
+                        @include font-Raleway-Regular;
+                        line-height: 120%;
+                        padding: 10px 15px;
+                        transition: color 0.3s ease-in-out 0s;
+                        @include media-breakpoint-up(lg){
+                            font-size: 21px;
+                            padding: 0;
+                        }
+                        &:hover,
+                        &:focus{
+                            color: $color-allports;
+                        }
+                    }
+                    &.active{
+                        .nav-link{
+                            color: $color-allports;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.main-programs{
+    .container{
+        @include media-breakpoint-down(md){
+            width: 100%;
+        }
+    }
+    .navbar{
+        padding: 10px 15px;
+        width: 100%;
+        @include media-breakpoint-up(lg){
+            padding: 15px;
+        }
+        .navbar-toggler{
+            border-color: $color-baltic-sea;
+            color: $color-baltic-sea;
+            cursor: pointer;
+            top: 5.55px;
+            @include media-breakpoint-up(lg){
+                top: 10.55px;
+            }
+        }
+        .navbar-brand{
+            color: $color-cerulean;
+            font-size: 18px;
+            @include font-Raleway-Bold;
+            line-height: 120%;
+            height: auto;
+            margin-right: 40px;
+            padding: 0;
+        }
+        .navbar-collapse{
+            @include media-breakpoint-down(lg){
+                margin-top: 10px;
+            }
+            .navbar-nav{
+                margin-left: -15px;
+                margin-right: -15px;
+                @include media-breakpoint-up(lg){
+                    margin-left: 0;
+                    margin-right: 0;
+                }
+                .nav-item{
+                    border-top: 1px solid $color-baltic-sea;
+                    @include media-breakpoint-up(lg){
+                        border-left: 1px solid $color-baltic-sea;
+                        border-right: 1px solid $color-baltic-sea;
+                    }
+                    @include media-breakpoint-up(xl){
+                        border-left: 0;
+                        border-right: 0;
+                        border-top: 0;
+                    }
+                    &:not(:last-child){
+                        @include media-breakpoint-up(xl){
+                            margin-right: 20px;
+                        }
+                    }
+                    &:last-child{
+                        border-bottom: none;
+                        @include media-breakpoint-up(lg){
+                            border-bottom: 1px solid $color-baltic-sea;
+                        }
+                        @include media-breakpoint-up(xl){
+                            border: none;
+                        }
+                    }
+                    .nav-link{
+                        color: $color-baltic-sea;
+                        font-size: 15px;
+                        @include font-Raleway-Regular;
+                        line-height: 120%;
+                        padding: 10px 15px;
+                        transition: color 0.3s ease-in-out 0s;
+                        @include media-breakpoint-up(xl){
+                            border-left: 3px solid $color-celery;
+                            font-size: 18px;
+                            padding: 0 0 0 10px;
+                        }
+                        &:hover,
+                        &:focus{
+                            color: $color-allports;
+                        }
+                    }
+                    &.active{
+                        .nav-link{
+                            color: $color-allports;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
